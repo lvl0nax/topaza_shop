@@ -32,3 +32,4 @@ bower.json
 /.idea
 /.idea/*
 /config/database.yml
+/db/schema.rb
