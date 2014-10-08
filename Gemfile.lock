@@ -78,6 +78,8 @@ GEM
     execjs (2.2.1)
     formtastic (3.0.0)
       actionpack (>= 3.2.13)
+    friendly_id (5.0.4)
+      activerecord (>= 4.0.0)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -179,6 +181,7 @@ DEPENDENCIES
   ckeditor
   coffee-rails (~> 4.0.0)
   devise
+  friendly_id (~> 5.0.0)
   haml
   haml-rails
   jquery-rails
