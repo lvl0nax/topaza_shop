@@ -6,10 +6,10 @@ class Dress < ActiveRecord::Base
   validates_associated :images
   before_save :set_main_image
 
-  has_many :images
+  has_many :images, as: :imageable, dependent: :destroy
 
   def set_main_image
-    images.first.update_attribute('main', true)
+    images.first.update_attribute('main', true) if main_image.blank?
   end
 
   def not_main_images

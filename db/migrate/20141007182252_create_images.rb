@@ -4,6 +4,8 @@ class CreateImages < ActiveRecord::Migration
       t.string :name
       t.integer :dress_id
       t.boolean :main
+      t.integer :imageable_id
+      t.string :imageable_type
     end
   end
 end
