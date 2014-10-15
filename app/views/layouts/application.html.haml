@@ -6,4 +6,24 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    = yield
+    .main_container
+      .header
+        .header_container
+          .header_container__logo
+            = link_to 'http://topaza.lvl0nax.lclients.ru' do
+              = image_tag image_url('logo.png')
+          .header_container__menu
+            = link_to 'МАГАЗИН', '#'
+            = link_to 'РАЗМЕРЫ', '#'
+            = link_to 'УСЛОВИЯ ПОКУПКИ', '#'
+            = link_to 'КОНТАКТЫ', '#'
+      .main_content
+        = yield
+      .footer
+        .footer_container
+          .footer_container__social_links
+            %a ВКОНТАКТЕ
+            %a FACEBOOK
+            %a INSTAGRAM
+            %a TWITTER
+
