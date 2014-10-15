@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'welcome#home'
 
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
