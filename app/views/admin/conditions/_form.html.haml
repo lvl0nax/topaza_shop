@@ -6,7 +6,7 @@
     = f.input :description, label: false, as: :ckeditor
   = f.inputs 'Images' do
     = f.fields_for :image do |image|
-      = image.file_field :name, multiple: :true, name: 'image[name][]'
+      = image.file_field :name, name: 'image[name][]'
     %br
     = render 'partials/images', item: @condition
 
