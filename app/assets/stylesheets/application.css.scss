@@ -10,8 +10,9 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require fonts
+ *= require_tree ./css_folder
  */
 html,body,div,span,h1,h2,h3,h4,b,u,i,s,em,form,fieldset,label,legend,input,button,textarea,a,p,table,caption,tbody,thead,tr,th,td, ul, li, ol{margin:0;padding:0;outline:none;}
 table {border-collapse:collapse;border-spacing:0; font-size:inherit;font:100%;}
@@ -53,6 +54,7 @@ html, body {
 }
 .main_content{
   padding-bottom: 70px;
+  margin: 0 auto;
 }
 
 /*--------------header-----------------*/
