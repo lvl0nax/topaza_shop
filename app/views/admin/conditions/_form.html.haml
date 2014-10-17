@@ -4,11 +4,11 @@
     = f.input :title, label: false
   = f.inputs 'Description' do
     = f.input :description, label: false, as: :ckeditor
-  = f.inputs 'Images' do
-    = f.fields_for :image do |image|
-      = image.file_field :name, multiple: :true, name: 'image[name][]'
+  = f.inputs 'Picture' do
+    = f.input :picture, as: :file, label: false
+    - if @condition.present?
+      = image_tag(@condition.picture.url)
     %br
-    = render 'partials/images', item: @condition
 
   = f.inputs 'SEO' do
     = f.input :seo_title, label: 'SEO Title'
