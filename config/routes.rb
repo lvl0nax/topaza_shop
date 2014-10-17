@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :conditions, only: :index
+  resources :dresses, only: [:index, :show]
   root 'welcome#home'
 
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :admin_users, ActiveAdmin::Devise.config
-  resources :conditions, only: :index
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

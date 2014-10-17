@@ -17,6 +17,6 @@ class Dress < ActiveRecord::Base
   end
 
   def main_image
-    images.collect{|image| image if image.main}.first
+    images.where(main: true).first
   end
 end

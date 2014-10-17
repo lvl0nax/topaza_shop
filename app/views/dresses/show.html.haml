@@ -1,0 +1,28 @@
+.dress
+  .dress_main_image
+    = image_tag @dress.images.first.name_url(:dress_big)
+  .dress_list_images
+    - @dress.images.each_with_index do |img, i|
+      = image_tag img.name_url(:dress_small), { class: "js_dress_to_show small_dress_image #{'image_selected' if i == 0}", data: { img: image_url(img.name_url(:dress_big)) } }
+      %br
+  .dress_main_info
+    %h1
+      = @dress.title
+    .dress_main_info__size
+      = @dress.size
+      размер /
+      = link_to 'таблица размеров', '#'
+      %br
+      = @dress.material
+
+    .dress_main_info__text
+      = @dress.description
+
+    .dress_main_info__price
+      = number_to_currency(@dress.price, separator: ',', delimiter: ' ', precision: 0, format: '%n %u', unit: 'P')
+
+    .dress_main_info__link_to_order
+      = link_to 'ЗАКАЗАТЬ', '#', {class: 'button_link gray_button_link'}
+
+.clearfix
+= render '/partials/footer_contacts'
