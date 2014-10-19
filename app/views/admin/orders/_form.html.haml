@@ -1,0 +1,23 @@
+//форму сделал на всякий случай - в админке ее не будет, т.к. не будет создания заказа, только index и show
+= semantic_form_for [:admin, @order]  do |f|
+  = f.semantic_errors *f.object.errors.keys
+  = f.inputs 'Name' do
+    = f.input :name, label: false
+  = f.inputs 'Email' do
+    = f.input :email, label: false
+  = f.inputs 'Phone' do
+    = f.input :phone, label: false
+  = f.inputs 'Country' do
+    = f.input :country, label: false, as: :string
+  = f.inputs 'City' do
+    = f.input :city, label: false
+  = f.inputs 'Address' do
+    = f.input :address, label: false
+  = f.inputs 'Zip_code' do
+    = f.input :zip_code, label: false
+  = f.inputs 'Dress' do
+    = f.input :dress, :as => :select, collection: Dress.all.name, label: false
+  = f.inputs 'Payment' do
+    = f.input :payment, label: false, :as => :select, collection: ['card', 'transfer']
+
+  = f.actions
