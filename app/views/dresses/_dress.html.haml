@@ -1,6 +1,6 @@
 %a.dress_item{ class: ('for_padding' if index % 4 != 0), href: dress_path(dress) }
   .dress_item__image
-    = image_tag dress.images.first.name_url(:dress_medium)
+    = image_tag dress.images.main.name_url(:dress_medium)
   .dress_item__info
     .dress_item__title
       = dress.title
