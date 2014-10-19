@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
-
-  def home; end
+  def home
+    @banner = Banner.first
+  end
 end
