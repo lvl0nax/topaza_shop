@@ -2,7 +2,7 @@ class Dress < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  validates_presence_of :title, :description, :size, :material, :price, :seo_title, :seo_description, :seo_keywords
+  validates_presence_of :title, :description, :size, :material, :price, :images
   validates_associated :images
   before_save :set_main_image
 

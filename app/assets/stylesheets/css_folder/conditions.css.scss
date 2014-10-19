@@ -1,8 +1,31 @@
-.conditions_title{
-  margin-bottom: 30px;
+.conditions{
+  padding: 0 2%;
 }
-.conditions_items{}
-.conditions_item{}
-.conditions_item_image{}
-.conditions_item_title{}
-.conditions_item_description{}
+.conditions-title{
+  margin-bottom: 90px;
+}
+.conditions-items{}
+.conditions-item{
+  margin-bottom: 40px;
+  overflow: hidden;
+  .conditions-item-image{
+    float: left;
+    width: 13%;
+    display: inline-block;
+    img {
+      max-width: 100%;
+    }
+  }
+  .conditions-item-title{
+    float: left;
+    font-size: 25px;
+    width: 13%;
+    display: inline-block;
+  }
+  .conditions-item-description{
+    float: left;
+    width: 44%;
+    display: inline-block;
+  }
+}
+
