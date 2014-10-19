@@ -2,5 +2,6 @@
   - item.images.each do |image|
     = image_tag(image.name.url(:dress_small))
     - unless image.main
-      = link_to 'Set main image', main_admin_image_path(image), data: { confirm: 'Are you sure to make this image the main?' }
-    = link_to 'Destroy', admin_image_path(image), method: :delete, data: { confirm: 'Are you sure?' }
+      = link_to 'Сделать главным изображением', main_admin_image_path(image), data: { confirm: 'Вы уверены что хотите сделать эту картинку главной?' }
+      |
+    = link_to 'Удалить', admin_image_path(image), method: :delete, data: { confirm: 'Вы уверены?' }

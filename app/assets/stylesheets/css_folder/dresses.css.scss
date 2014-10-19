@@ -1,5 +1,5 @@
 .dress{
-  padding: 0 45px;
+  padding: 0 2%;
 }
 .dress_main_image{
   float: left;
@@ -60,3 +60,54 @@
 .image_selected:hover{
   opacity: 0.5;
 }
+
+/*-------------------dresses list ---------------------------*/
+.dresses_list{
+  padding: 0 2%;
+  margin: 0 auto;
+  text-align: center;
+}
+.dress_item{
+  display: inline-block;
+  position: relative;
+  margin-bottom: 3.46%;
+  width: 22.1%;
+  img{
+    width: 100%;
+  }
+  &:hover{
+    img{
+      opacity: 0.9;
+    }
+  }
+}
+.dress_item__info{
+  position: absolute;
+  bottom: 40px;
+  color:  #48485d;
+  left: 4%;
+  width: 92%;
+}
+.dress_item__title{
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Oldsman';
+  font-size: 50px;
+  line-height: 50px;
+}
+.dress_item__line{
+  margin: 20px auto;
+  background-color:  rgba(72, 72, 93, 0.3);
+  width: 100px;
+  height: 1px;
+}
+.dress_item__size{
+  text-align: center;
+  font-family: 'baufra';
+  color:  #48485d;
+  font-size: 21px;
+}
+.for_padding{
+  margin-left: 3.46%;
+}
+/*-------------------end dresses list ---------------------------*/
