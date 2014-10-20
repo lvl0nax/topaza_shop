@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def home
-    @banner = Banner.first
+    @banners = Banner.in_main
   end
 end

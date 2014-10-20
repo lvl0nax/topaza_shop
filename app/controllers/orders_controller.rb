@@ -1,3 +1,5 @@
 class OrdersController < ApplicationController
-  def thanks;  end
+  def thanks
+    @banners = Banner.in_thanks
+  end
 end
