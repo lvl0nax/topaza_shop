@@ -1,3 +1,6 @@
 class OrdersController < ApplicationController
-  def thanks;  end
+  include Banners
+  def thanks
+    set_banners
+  end
 end
