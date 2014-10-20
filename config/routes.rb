@@ -2,8 +2,10 @@ Rails.application.routes.draw do
 
   resources :conditions, only: :index
   resources :dresses, only: [:index, :show]
-  root 'welcome#home'
 
+  get 'dresses_sizes' => 'welcome#sizes', as: 'dresses_sizes'
+
+  root 'welcome#home'
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
