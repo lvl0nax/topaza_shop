@@ -1,0 +1,14 @@
+.discount
+  .discount__image-left{:style => ('bottom: 177px' if controller_name=='discounts')}
+    = image_tag 'small_rose.png'
+  .discount__title
+    .discount__title__years
+      .discount__title__years__middle_line
+      TP
+      .discount__title__years__middle_line
+    .discount__title__text{style: 'line-height:normal'}
+      = @banner.title
+    .index_discounts-item-right-link
+      = link_to @banner.button_name, @banner.url
+  .discount__image-right
+    = image_tag 'big_rose.png'

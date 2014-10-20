@@ -1,0 +1,15 @@
+= semantic_form_for [:admin, @banner]  do |f|
+  = f.semantic_errors *f.object.errors.keys
+  =f.inputs 'Title' do
+    = f.input :title, label: false
+  =f.inputs 'Button name' do
+    = f.input :button_name, label: false
+  =f.inputs 'Url' do
+    = f.input :url, label: false, placeholder: 'http://google.com'
+  =f.inputs 'Positions' do
+    = f.input :positions, label: false, as: :check_boxes, collection: [['Главная', 'welcome#home', checked: @banner.positions.include?('welcome#home')],
+                                                                       ['Условия покупки', 'conditions#index', checked: @banner.positions.include?('conditions#index')],
+                                                                       ['Контакты', 'welcome#contacts', checked: @banner.positions.include?('welcome#contacts')],
+                                                                       ['Платья', 'dresses#index', checked: @banner.positions.include?('dresses#index')],
+                                                                       ['Спасибо за покупку', 'orders#thanks', checked: @banner.positions.include?('orders#thanks')]]
+  = f.actions
