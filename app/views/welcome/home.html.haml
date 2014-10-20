@@ -1,4 +1,21 @@
-домашняя страничка
+.main_page
+  .carousel-class
+    - @dresses.each do |dress|
+      = image_tag dress.images.main.name_url(:dress_medium)
 
 = render '/partials/footer_contacts'
 = render 'banners/show'
+
+:javascript
+  $(document).ready(function(){
+    $('.carousel-class').slick({
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      centerMode: true,
+      infinite: true,
+      slide: 'img',
+      variableWidth: true,
+      focusOnSelect: true
+    });
+  });

@@ -4,6 +4,7 @@ class WelcomeController < ApplicationController
 
   def home
     @banners = Banner.in_main
+    @dresses = Dress.all
   end
 
   def contacts
