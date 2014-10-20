@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'contacts' => 'welcome#contacts'
   get 'thanks' => 'orders#thanks'
   resources :conditions, only: :index
   resources :dresses, only: [:index, :show]
