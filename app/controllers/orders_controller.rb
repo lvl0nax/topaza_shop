@@ -1,6 +1,5 @@
 class OrdersController < ApplicationController
-  include Banners
   def thanks
-    set_banners
+    @banners = Banner.in_main
   end
 end
