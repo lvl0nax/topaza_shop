@@ -7,8 +7,9 @@
   =f.inputs 'Url' do
     = f.input :url, label: false, placeholder: 'http://google.com'
   =f.inputs 'Positions' do
-    = f.input :positions, label: false, as: :check_boxes, collection: [['Условия покупки', 1, checked: @banner.positions.include?('1')],
-                                                                       ['Контакты', 2, checked: @banner.positions.include?('2')],
-                                                                       ['Платья', 3, checked: @banner.positions.include?('3')],
-                                                                       ['Спасибо за покупку', 4, checked: @banner.positions.include?('4')]]
+    = f.input :positions, label: false, as: :check_boxes, collection: [['Главная', 'welcome#home', checked: @banner.positions.include?('welcome#home')],
+                                                                       ['Условия покупки', 'conditions#index', checked: @banner.positions.include?('conditions#index')],
+                                                                       ['Контакты', 'welcome#contacts', checked: @banner.positions.include?('welcome#contacts')],
+                                                                       ['Платья', 'dresses#index', checked: @banner.positions.include?('dresses#index')],
+                                                                       ['Спасибо за покупку', 'orders#thanks', checked: @banner.positions.include?('orders#thanks')]]
   = f.actions
