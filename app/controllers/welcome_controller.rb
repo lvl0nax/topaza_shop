@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
+  include Banners
   def home
-    @banner = Banner.first
+    set_banners
   end
 end
