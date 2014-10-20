@@ -5,8 +5,27 @@
     .sizes__content__right
       .sizes__content__right__text
         Наши платья подойдут девушкам ростом около 170 см. Каждому размеру соответствует таблица точных параметров. Выбирайте платье с небольшим запасом и будьте готовы ушить его под свою фигуру.
+
       .sizes__content__right__img
-        = image_tag asset_url('sizes.png')
+        = image_tag asset_url('main_sizes.png')
+        = image_tag asset_url('neck.png'), class: 'for_absolute neck_highline'
+        = image_tag asset_url('back_height.png'), class: 'for_absolute back_height_highline'
+        = image_tag asset_url('back_waist_height.png'), class: 'for_absolute back_waist_height_highline'
+        = image_tag asset_url('back_width.png'), class: 'for_absolute back_width_highline'
+        = image_tag asset_url('below_chest.png'), class: 'for_absolute below_chest_highline'
+        = image_tag asset_url('body_height.png'), class: 'for_absolute body_height_highline'
+        = image_tag asset_url('chect_height.png'), class: 'for_absolute chest_height_highline'
+        = image_tag asset_url('chest.png'), class: 'for_absolute chest_highline'
+        = image_tag asset_url('chest_width.png'), class: 'for_absolute chest_width_highline'
+        = image_tag asset_url('elbow.png'), class: 'for_absolute elbow_highline'
+        = image_tag asset_url('front_waist_height.png'), class: 'for_absolute front_waist_height_highline'
+        = image_tag asset_url('hips.png'), class: 'for_absolute hips_highline'
+        = image_tag asset_url('shoulder.png'), class: 'for_absolute shoulder_highline'
+        = image_tag asset_url('shoulder_length.png'), class: 'for_absolute shoulder_length_highline'
+        = image_tag asset_url('up_chest.png'), class: 'for_absolute up_chest_highline'
+        = image_tag asset_url('waist.png'), class: 'for_absolute waist_highline'
+
+
     .sizes__content__left
       %table.sizes_table
         %thead
@@ -18,105 +37,105 @@
             %td 50
             %td 52
         %tbody
-          %tr.bold_table__row
+          %tr.bold_table__row.js_to_hover{ data: {klass: 'chest_highline'} }
             %td Обхват груди
             %td 88.0
             %td 92.0
             %td 96.0
             %td 100.0
             %td 104.0
-          %tr.bold_table__row
+          %tr.bold_table__row.js_to_hover{ data: {klass: 'waist_highline'} }
             %td Обхват талии
             %td 66.0
             %td 70.0
             %td 74.0
             %td 78.0
             %td 82.0
-          %tr.bold_table__row
+          %tr.bold_table__row.js_to_hover{ data: {klass: 'hips_highline'} }
             %td Обхват бедер
             %td 96.0
             %td 100.0
             %td 104.0
             %td 108.0
             %td 112.0
-          %tr
+          %tr.js_to_hover{ data: {klass: 'neck_highline'} }
             %td Обхват шеи
             %td 35.6
             %td 36.4
             %td 37.2
             %td 38.0
             %td 38.8
-          %tr
+          %tr.js_to_hover{ data: {klass: 'shoulder_length_highline'} }
             %td Ширина плеча
             %td 13.3
             %td 13.4
             %td 13.5
             %td 13.6
             %td 13.7
-          %tr
+          %tr.js_to_hover{ data: {klass: 'elbow_highline'} }
             %td Длина рукава до запястья
             %td 57.0
             %td 57.5
             %td 57.5
             %td 58.0
             %td 58.0
-          %tr
+          %tr.js_to_hover{ data: {klass: 'shoulder_highline'} }
             %td Обхват плеча
             %td 27.3
             %td 28.7
             %td 30.1
             %td 31.5
             %td 32.9
-          %tr
+          %tr.js_to_hover{ data: {klass: 'up_chest_highline'} }
             %td Обхват над грудью
             %td 86.2
             %td 89.2
             %td 92.2
             %td 95.2
             %td 98.2
-          %tr
+          %tr.js_to_hover{ data: {klass: 'below_chest_highline'} }
             %td Обхват под грудью
             %td 76.0
             %td 79.4
             %td 82.8
             %td 86.2
             %td 89.6
-          %tr
+          %tr.js_to_hover{ data: {klass: 'chest_width_highline'} }
             %td Ширина груди
             %td 33.4
             %td 34.2
             %td 35.0
             %td 35.8
             %td 36.6
-          %tr
+          %tr.js_to_hover{ data: {klass: 'back_width_highline'} }
             %td Ширина спины
             %td 34.6
             %td 35.6
             %td 36.6
             %td 37.6
             %td 38.6
-          %tr
+          %tr.js_to_hover{ data: {klass: 'back_height_highline'} }
             %td Длина спины
             %td 43.9
             %td 44.0
             %td 44.1
             %td 44.2
             %td 44.3
-          %tr
+          %tr.js_to_hover{ data: {klass: 'body_height_highline'} }
             %td Длина переда
             %td 44.2
             %td 44.8
             %td 45.4
             %td 46.0
             %td 46.6
-          %tr
+          %tr.js_to_hover{ data: {klass: 'chest_height_highline'} }
             %td Высота груди
             %td 25.0
             %td 25.7
             %td 26.5
             %td 27.3
             %td 28.0
-          %tr
+          %tr.js_to_hover{ data: {klass: 'front_waist_height_highline'} }
             %td
               Длина спереди
               %br (от талии до пола без каблука)
@@ -125,7 +144,7 @@
             %td 108.3
             %td 108.6
             %td 108.9
-          %tr
+          %tr.js_to_hover{ data: {klass: 'back_waist_height_highline'} }
             %td
               Длина сзади
               %br (от талии до пола без каблука)
@@ -135,6 +154,18 @@
             %td 110.6
             %td 110.8
 
-
     .clearfix
+
 %br
+= render 'partials/footer_contacts'
+
+:javascript
+  var klass;
+  $('.js_to_hover').hover(
+    function() {
+      klass = $( this ).data('klass');
+      $('.'+ klass).show();
+    }, function() {
+      $('.'+ klass).hide();
+    }
+  );
