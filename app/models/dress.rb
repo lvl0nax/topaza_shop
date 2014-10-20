@@ -7,6 +7,7 @@ class Dress < ActiveRecord::Base
   before_save :set_main_image
 
   has_many :images, as: :imageable, dependent: :destroy
+  has_many :orders
 
   def set_main_image
     images.first.update_attribute('main', true) if main_image.blank?
