@@ -3,6 +3,10 @@
 }
 .conditions-title{
   margin-bottom: 90px;
+  font-family: Baufra;
+  color:  #13131c;
+  font-size: 35px;
+  line-height: 40px;
 }
 .conditions-items{}
 .conditions-item{
@@ -21,11 +25,17 @@
     font-size: 25px;
     width: 13%;
     display: inline-block;
+    font-family: Baufra;
+    color:  #13131c;
+    font-weight: 400;
+    line-height: 29.966px;
+    margin-top: 16px;
   }
   .conditions-item-description{
     float: left;
     width: 44%;
     display: inline-block;
+    margin-top: 16px;
   }
 }
 
