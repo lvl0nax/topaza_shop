@@ -1,0 +1,137 @@
+.sizes{
+  padding: 0 2%;
+}
+.sizes__page_title{
+  font-family: 'baufra';
+  color:  #13131c;
+  font-size: 34.69px;
+}
+.sizes__content{
+  margin-top: 20px;
+}
+.sizes__content__left{
+  padding-right: 650px;
+}
+.sizes__content__right{
+  width: 630px;
+  float: right;
+}
+.sizes__content__right__text{
+  font-family: 'Open Sans';
+  color:  #8b8b9f;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.sizes__content__right__img{
+  background-color: #dedfe1;
+  position: relative;
+}
+
+
+.for_absolute{
+  position: absolute;
+  display: none;
+}
+.neck_highline{
+  top: 55px;
+  left: 154px;
+}
+.back_height_highline{
+  top: 142px;
+  left: 534px;
+}
+.back_waist_height_highline{
+  top: 227px;
+  left: 522px;
+}
+.back_width_highline{
+  top: 177px;
+  left: 504px;
+}
+.below_chest_highline{
+  top: 162px;
+  left: 123px;
+}
+.body_height_highline{
+  top: 142px;
+  left: 394px;
+}
+.chest_height_highline{
+  top: 81px;
+  left: 171px;
+}
+.chest_highline{
+  top: 141px;
+  left: 117px;
+}
+.chest_width_highline{
+  top: 174px;
+  left: 362px;
+}
+.elbow_highline{
+  top: 93px;
+  left: 20px;
+}
+.front_waist_height_highline{
+  top: 227px;
+  left: 409px;
+}
+.hips_highline{
+  top: 271px;
+  left: 95px;
+}
+.shoulder_highline{
+  top: 87px;
+  left: 107px;
+}
+.shoulder_length_highline{
+  top: 135px;
+  left: 346px;
+}
+.up_chest_highline{
+  top: 119px;
+  left: 115px;
+}
+.waist_highline{
+  top: 213px;
+  left: 134px;
+}
+
+table.sizes_table{
+  width: 100%;
+  margin-bottom: 20px;
+  thead{
+    background-color: #f5f5f7;
+    font-family: 'baufra';
+    color:  #48485d;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  tbody{
+    td{
+      font-family: 'baufra';
+      color:  #8b8b9f;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    tr td:first-child{
+      font-family: 'Open Sans';
+      color:  #8b8b9f;
+      font-size: 16px;
+      font-weight: 300;
+    }
+    tr td:last-child{
+      line-height: 40px;
+    }
+    tr:hover{
+      cursor: pointer;
+      background-color: #f7f7f9;
+    }
+  }
+}
+tr.bold_table__row{
+  border-bottom: 1px solid #dfdfdf;
+  td{
+    color:  #48485d !important;
+  }
+}

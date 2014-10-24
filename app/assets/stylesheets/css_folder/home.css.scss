@@ -1,0 +1,29 @@
+.carousel-class{
+  overflow: hidden;
+}
+.slick-slide{
+}
+.slick-prev{
+  margin-top: -20px !important;
+  left: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  height: 50px !important;
+  width: 50px !important;
+}
+.slick-next{
+  margin-top: -20px !important;
+  right: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  height: 50px !important;
+  width: 50px !important;
+}
+.slick-next:before {
+  font-size: 30px !important;
+  font-family: 'Open Sans' !important;
+  content: "\003e" !important;
+}
+.slick-prev:before {
+  font-size: 30px !important;
+  font-family: 'Open Sans' !important;
+  content: "\003c" !important;
+}
