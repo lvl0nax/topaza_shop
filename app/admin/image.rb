@@ -16,13 +16,19 @@ ActiveAdmin.register Image do
   controller do
     def destroy
       @image = Image.find(params[:id].to_i)
-      if model_name(@image).constantize == Dress && @image.main
-        all_images = model_name(@image).constantize.find(@image.imageable_id).images.pluck(:id)
-        all_images.delete(@image.id)
-        Image.find(all_images.first).update_attribute('main', true)
+      images = model_name(@image).constantize.find(@image.imageable_id).images
+      if  images.count != 1
+        if model_name(@image).constantize == Dress && @image.main
+          all_images = model_name(@image).constantize.find(@image.imageable_id).images.pluck(:id)
+          all_images.delete(@image.id)
+          Image.find(all_images.first).update_attribute('main', true)
+        end
+        notice = @image.destroy ? 'Изображение успешно удалено' : 'Изображение не удалено'
+        set_redirect_path(notice, @image)
+      else
+        set_redirect_path('Нельзя удалить последнее изображение', @image)
       end
-      notice = @image.destroy ? 'Image was successfully destroyed' : 'Image not destroyed'
-      set_redirect_path(notice, @image)
+
     end
 
     private

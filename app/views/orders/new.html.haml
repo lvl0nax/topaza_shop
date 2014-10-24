@@ -1,0 +1,60 @@
+.orders
+  .orders-left
+    %h1 ОФОРМЛЕНИЕ ПОКУПКИ
+    .orders-left-dress
+      .orders-left-dress-image
+        = image_tag @dress.images.main.name.url(:dress_small)
+      .orders-left-dress-body
+        .orders-left-dress-body-text
+          Cвадебное платье
+        .orders-left-dress-body-title
+          &laquo;#{@dress.title}&raquo;
+        .orders-left-dress-body-size
+          #{@dress.size} размер
+      .orders-left-dress-price
+        #{number_to_currency(@dress.price, separator: " ", delimiter: " ", precision: 0, unit: '')}
+        = image_tag 'ruble2.png'
+    = form_for @order  do |f|
+      .items
+        .items-title
+          ВАШИ КОНТАКТЫ
+        = f.text_field :name, class: 'items-item_input', placeholder: 'ВАШЕ ИМЯ'
+        = f.text_field :email, class: 'items-item_input', placeholder: 'ЭЛ. ПОЧТА'
+        = f.text_field :phone, class: 'items-item_input', placeholder: 'ТЕЛЕФОН'
+      .items
+        .items-title
+          АДРЕС ДОСТАВКИ
+        = f.text_field :country, class: 'items-item_input', placeholder: 'СТРАНА'
+        = f.text_field :city, class: 'items-item_input', placeholder: 'ГОРОД'
+        .items-delivery_price
+          + 800
+          = image_tag 'ruble2.png'
+        = f.text_field :address, class: 'items-item_input', placeholder: 'АДРЕС ДОСТАВКИ'
+        = f.text_field :zip_code, class: 'items-item_input', placeholder: 'ИНДЕКС'
+      .items
+        .items-title
+          СПОСОБ ОПЛАТЫ
+        = f.collection_radio_buttons :payment_id, PaymentType.all, :id, :name do |b|
+          .items-radiobuttons
+            = b.radio_button
+            = b.label(class: 'custom_radiobutton')
+      .items-last
+        .items-last-summ
+          Итого
+          .items-last-summ-price
+            = number_to_currency(@dress.price+800, separator: " ", delimiter: " ", precision: 0, unit: '')
+          = image_tag 'ruble2.png' , style: 'height: 25px;'
+        .items-last-back
+          = image_tag 'back.png'
+          .items-last-back-text
+            ВЕРНУТЬСЯ
+        .items-last-buy
+          = f.submit 'ОПЛАТИТЬ', class: 'items-last-buy-submit'
+        .items-last-comments
+          После оплаты заказ будет сформирован. На ваш электронный адрес придет подтверждающее письмо, а наши сотрудники свяжутся с вами по указанному телефону, чтобы перепроверить детали отправки.
+  .orders-right-info
+    Мы не подгоняем модели, которые продаем
+    %br в интернет-магазине, и благодаря этому вы можете
+    купить платье по цене ниже, чем в студии Topaza Pella.
+= render '/partials/footer_contacts'
+

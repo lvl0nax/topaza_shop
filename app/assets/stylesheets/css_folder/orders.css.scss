@@ -1,0 +1,206 @@
+.orders{
+  padding: 0 2%;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+.orders-left{
+  width: 50%;
+  float: left;
+  h1 {
+    font-family: Baufra;
+    color:  #13131c;
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+.orders-left-dress{
+  padding: 10px;
+  border: 1px solid #ae9082;
+  overflow: hidden;
+  margin-top: 30px;
+  .orders-left-dress-image{
+    img { max-width: 100%}
+    float: left;
+  }
+  .orders-left-dress-body{
+    float: left;
+    width: 50%;
+    margin-left: 20px;
+    .orders-left-dress-body-text{
+      font-family: 'baufra';
+      color:  #14141c;
+      font-size: 25px;
+      line-height: 29.732px;
+    }
+    .orders-left-dress-body-title{
+      font-family: 'baufra';
+      color:  #14141c;
+      font-size: 25px;
+      line-height: 29.732px;
+    }
+    .orders-left-dress-body-size{
+      font-family: Baufra;
+      color:  #48485d;
+      font-size: 21px;
+      line-height: 30.173px;
+    }
+  }
+  .orders-left-dress-price{
+    float: right;
+    width: 20%;
+    font-family: Baufra;
+    color:  #13131c;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: right;
+    img {
+
+    }
+  }
+}
+.orders-right-info{
+  font-family: 'OpenSansLight';
+  color:  #ae9082;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 19.977px;
+  float: left;
+  width: 46%;
+  margin-top: 70px;
+  margin-left: 30px;
+}
+.items {
+  overflow: hidden;
+  border: 1px solid #eae9f1 !important;
+  padding-bottom: 31px;
+}
+.items-title{
+  text-align: right;
+  font-family: 'baufra';
+  color:  rgba(72, 72, 93, 0.5);
+  font-size: 16px;
+  line-height: 30.173px;
+  padding-right: 7px;
+  background: linear-gradient(to bottom, #f8f8fa, #ffffff);
+  height: 44px;
+}
+.items-item_input{
+  background-color: rgba(225, 225, 234, 0) !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  border-bottom: 1px solid #babac7 !important;
+  width: 71% !important;
+  margin: 12px 30px;
+  font-family: 'baufra' !important;
+  font-size: 21px !important;
+  line-height: 50px;
+  font-weight: 500;
+  float: left;
+}
+.items-delivery_price{
+  font-family: Baufra;
+  color: #13131C;
+  font-size: 25px;
+  line-height: 40px;
+  overflow: hidden;
+  width: 15%;
+  float: left;
+  margin-top: 15px;
+}
+.items-radiobuttons{
+  margin-left: 35px;
+}
+.custom_radiobutton{
+  padding-bottom: 20px;
+}
+/*------*/
+input[type="radio"] {
+  display:none;
+}
+input[type="radio"] + label {
+  font-family: Baufra;
+  color:  #8b8b9f;
+  font-size: 19px; /* Approximation due to font substitution */
+  line-height: 50px;
+  cursor: pointer;
+}
+input[type="radio"] + label::before {
+  content: "";
+  display: inline-block;
+  height: 34px;
+  width: 34px;
+  margin: 0px 5px 0 0;
+  background: image_url('radiobutton.png') no-repeat;
+}
+
+input[type="radio"] + label::before {
+  background-position: left bottom;
+  img {
+    margin-top: 50px;
+  }
+}
+input[type="radio"]:checked + label::before {
+  background-position: left top;
+}
+/*-----*/
+.items-last {
+  overflow: hidden;
+  padding-bottom: 31px;
+  padding-top: 31px;
+}
+.items-last-summ{
+  text-align: right;
+  font-family: Baufra;
+  color:  #48485d;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 30.173px;
+  margin-bottom: 40px;
+  .items-last-summ-price{
+    display: inline-block;
+    color:  #14141c;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 40px;
+  }
+}
+.items-last-back{
+  float: left;
+  img {
+    float: left;
+  }
+  .items-last-back-text{
+    font-family: Baufra;
+    color:  rgba(124, 124, 138, 0.5);
+    font-size: 18px;
+    line-height: 47px;
+    margin-left: 50px;
+  }
+}
+.items-last-buy{
+  float: right;
+}
+.items-last-buy-submit {
+  font-family: Baufra;
+  color: #7C7C8A;
+  font-size: 18px;
+  padding: 6px 10px;
+  border: 1px solid #BABAC7;
+  background-color: #FFF;
+  &:hover {
+    color: #13131c;
+    border: 1px solid #13131c;
+  }
+}
+.items-last-comments{
+  float: right;
+  text-align: right;
+  font-family: OpenSansLight;
+  color: #8B8B9F;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 20px;
+  width: 489px;
+  margin-top: 20px;
+}

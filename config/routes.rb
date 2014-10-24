@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders, only: [:new, :create]
   get 'contacts' => 'welcome#contacts'
   get 'thanks' => 'orders#thanks'
   resources :conditions, only: :index
