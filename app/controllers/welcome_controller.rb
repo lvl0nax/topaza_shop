@@ -3,7 +3,6 @@ class WelcomeController < ApplicationController
   def sizes; end
 
   def home
-    @banners = Banner.in_main
     @dresses = Dress.all
   end
 
