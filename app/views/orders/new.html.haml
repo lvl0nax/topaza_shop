@@ -34,7 +34,7 @@
       .items
         .items-title
           СПОСОБ ОПЛАТЫ
-        = f.collection_radio_buttons :payment_id, PaymentType.all, :id, :name do |b|
+        = f.collection_radio_buttons :payment_type_id, PaymentType.all, :id, :name do |b|
           .items-radiobuttons
             = b.radio_button
             = b.label(class: 'custom_radiobutton')

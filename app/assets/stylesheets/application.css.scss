@@ -59,7 +59,7 @@ html, body {
 /*--------------header-----------------*/
 .header{
   height: 60px;
-  padding: 45px 2%;
+  padding: 45px;
 }
 .header_container__logo{
   float: left;
@@ -145,4 +145,9 @@ html, body {
   color:  #7c7c8a;
   font-size: 23.4px;
   text-decoration: none;
+}
+
+.current_page_link{
+  font-weight: bold;
+  color:  #14141c !important;
 }

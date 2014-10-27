@@ -15,10 +15,10 @@
             = link_to 'http://topaza.lvl0nax.lclients.ru' do
               = image_tag image_url('logo.png')
           .header_container__menu
-            = link_to 'МАГАЗИН', '#'
-            = link_to 'РАЗМЕРЫ', dresses_sizes_path
-            = link_to 'УСЛОВИЯ ПОКУПКИ', conditions_path
-            = link_to 'КОНТАКТЫ', contacts_path
+            = link_to 'МАГАЗИН', dresses_path, {class: ('current_page_link' if current_page?(dresses_path))}
+            = link_to 'РАЗМЕРЫ', dresses_sizes_path, {class: ('current_page_link' if current_page?(dresses_sizes_path))}
+            = link_to 'УСЛОВИЯ ПОКУПКИ', conditions_path, {class: ('current_page_link' if current_page?(conditions_path))}
+            = link_to 'КОНТАКТЫ', contacts_path, {class: ('current_page_link' if current_page?(contacts_path))}
       .main_content
         = yield
       .footer
