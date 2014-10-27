@@ -1,18 +1,19 @@
 class OrdersController < ApplicationController
   def thanks
     @banners = Banner.in_thanks
+    @order = Order.find(params[:id])
   end
 
   def new
     @order = Order.new
-    @dress = Dress.first
+    @dress = Dress.find(params[:dress_id])
   end
 
   def create
     @order = Order.new(order_params)
     respond_to do |format|
       if @order.save
-        format.html { redirect_to thanks_path }
+        format.html { redirect_to thanks_order_path(@order.id) }
       else
         format.html { render action: 'new' }
       end
