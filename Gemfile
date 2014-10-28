@@ -18,3 +18,4 @@ gem 'friendly_id', '~> 5.0.0'
 
 gem 'capistrano'
 gem 'unicorn'
+gem 'paperclip'
