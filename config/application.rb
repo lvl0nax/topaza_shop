@@ -23,6 +23,5 @@ module TopazaShop
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.assets.enabled = true
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
-    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   end
 end
