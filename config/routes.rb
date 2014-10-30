@@ -10,8 +10,8 @@ Rails.application.routes.draw do
 
   get 'dresses_sizes' => 'welcome#sizes', as: 'dresses_sizes'
 
-  root 'welcome#home'
   mount Ckeditor::Engine => '/ckeditor'
+  root 'welcome#home'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
