@@ -51,8 +51,8 @@ ActiveAdmin.register Dress do
 
     def create
       @dress = Dress.new(permitted_params[:dress])
-      params[:image][:name].each {|name| @dress.images << Image.create(name: name)} if params[:image].present?
-
+      #params[:image][:name].each {|name| @dress.images << Image.create(name: name)} if params[:image].present?
+      @dress.images.build(params[:image][:name].map{|str| {name: str} }) if params[:image].present?
       respond_to do |format|
         if @dress.save
           format.html { redirect_to admin_dresses_path, notice: 'Dress was successfully created.' }
