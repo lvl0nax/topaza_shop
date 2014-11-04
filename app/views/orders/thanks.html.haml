@@ -7,14 +7,6 @@
       %br ЗА ПОКУПКУ!
     .thanks-right_text-line
     .thanks-right_text-body
-      - case @order.payment_type_id
-        - when  1
-          На ваш электронный адрес придет
-          %br подтверждающее письмо, а наши сотрудники
-          свяжутся с вами по указанносу телефону, чтобы
-          %br перепроверить детали отправки
-        - else
-          Счет-квитанция на оплату придет на вашу
-          %br электронную почту #{@order.email}
+      = @order.payment_type.message
 = render '/partials/footer_contacts'
 = render 'banners/show'
