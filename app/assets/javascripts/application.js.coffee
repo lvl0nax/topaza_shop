@@ -14,8 +14,8 @@
 #= require jquery_ujs
 #= require_tree .
 
-$(document).on 'click', '.js_dress_to_show', (e) ->
-  $('.image_selected').removeClass('image_selected')
-  $(e.currentTarget).addClass('image_selected')
-  src = $(e.currentTarget).data('img')
-  $('.dress_main_image img').attr('src', src)
+#$(document).on 'click', '.js_dress_to_show', (e) ->
+#  $('.image_selected').removeClass('image_selected')
+#  $(e.currentTarget).addClass('image_selected')
+#  src = $(e.currentTarget).data('img')
+#  $('.dress_main_image img').attr('src', src)

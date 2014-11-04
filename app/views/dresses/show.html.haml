@@ -26,3 +26,12 @@
 
 .clearfix
 = render '/partials/footer_contacts'
+
+:javascript
+  $(document).on('click', '.js_dress_to_show', function(e) {
+    var src;
+    $('.image_selected').removeClass('image_selected');
+    $(e.currentTarget).addClass('image_selected');
+    src = $(e.currentTarget).data('img');
+    return $('.dress_main_image img').attr('src', src);
+  });
