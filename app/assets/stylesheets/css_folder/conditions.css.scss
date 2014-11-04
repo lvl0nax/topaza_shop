@@ -7,6 +7,9 @@
   color:  #13131c;
   font-size: 35px;
   line-height: 40px;
+  h1{
+    font-size: 35px;
+  }
 }
 .conditions-items{}
 .conditions-item{
@@ -36,6 +39,10 @@
     width: 44%;
     display: inline-block;
     margin-top: 16px;
+    font-family: 'Open Sans';
+    p{
+      margin: 0 0 20px 0;
+    }
   }
 }
 
