@@ -12,7 +12,7 @@ ActiveAdmin.register Order do
     column :address
     column :zip_code
     column :payment_type do |order|
-      order.payment_type.name
+      order.payment_type.name unless order.payment_type.nil?
     end
     actions
   end
