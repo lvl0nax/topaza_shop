@@ -44,10 +44,11 @@
           .items-last-summ-price
             = number_to_currency(@dress.price+800, separator: " ", delimiter: " ", precision: 0, unit: '')
           = image_tag 'ruble2.png' , style: 'height: 25px;'
-        .items-last-back
-          = image_tag 'back.png'
-          .items-last-back-text
-            ВЕРНУТЬСЯ
+        %a{ href: _back_url }
+          .items-last-back
+            = image_tag 'back.png'
+            .items-last-back-text
+              ВЕРНУТЬСЯ
         .items-last-buy
           = f.submit 'ОПЛАТИТЬ', class: 'items-last-buy-submit'
         .items-last-comments
