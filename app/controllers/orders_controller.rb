@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
   def thanks
     @banners = Banner.in_thanks
     @order = Order.find(params[:id])
+    @message = @order.payment_type.name == 'Банковский перевод' ? @order.payment_type.message + ' '+ @order.email : @order.payment_type.message
   end
 
   def new

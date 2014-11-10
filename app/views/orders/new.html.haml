@@ -1,6 +1,6 @@
 .orders
   .orders-left
-    %h1 ОФОРМЛЕНИЕ ПОКУПКИ
+    %h1 Детали заказа / Детали покупки / Оформление заказа
     .orders-left-dress
       .orders-left-dress-image
         = image_tag @dress.images.main.name.url(:dress_small)
@@ -10,7 +10,7 @@
         .orders-left-dress-body-title
           &laquo;#{@dress.title}&raquo;
         .orders-left-dress-body-size
-          #{@dress.size} размер
+          #{@dress.size}-й размер
       .orders-left-dress-price
         #{number_to_currency(@dress.price, separator: " ", delimiter: " ", precision: 0, unit: '')}
         = image_tag 'ruble2.png'
