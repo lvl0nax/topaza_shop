@@ -58,6 +58,16 @@
     }
   }
 }
+
+.order_errors{
+  margin: 20px 10px;
+  color: #ae9082;
+}
+.error_field{
+  color: #ae9082;
+  border-color: #ae9082;
+}
+
 .orders-right-info{
   font-family: 'OpenSansLight';
   color:  #ae9082;
@@ -132,6 +142,7 @@ input[type="radio"] + label::before {
   width: 34px;
   margin: 0px 5px 0 0;
   background: image_url('radiobutton.png') no-repeat;
+  vertical-align: middle;
 }
 
 input[type="radio"] + label::before {

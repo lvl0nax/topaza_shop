@@ -1,6 +1,6 @@
 .orders
   .orders-left
-    %h1 Детали заказа / Детали покупки / Оформление заказа
+    %h1 Оформление заказа
     .orders-left-dress
       .orders-left-dress-image
         = image_tag @dress.images.main.name.url(:dress_small)
@@ -14,7 +14,13 @@
       .orders-left-dress-price
         #{number_to_currency(@dress.price, separator: " ", delimiter: " ", precision: 0, unit: '')}
         = image_tag 'ruble2.png'
+    - if @order.errors.any?
+      %ol.order_errors
+        - @order.errors.values.each do |msg|
+          %li= msg.first
+
     = form_for @order  do |f|
+      = f.hidden_field :dress_id, value: @dress.id
       .items
         .items-title
           ВАШИ КОНТАКТЫ

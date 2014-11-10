@@ -11,7 +11,8 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
+    @dress = Dress.find(params[:order].delete(:dress_id))
+    @order = @dress.orders.new(order_params)
     respond_to do |format|
       if @order.save
         format.html { redirect_to thanks_order_path(@order.id) }
