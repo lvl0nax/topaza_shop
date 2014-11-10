@@ -8,6 +8,6 @@ class Order < ActiveRecord::Base
   before_save :add_price_content
   private
   def add_price_content
-    self.price_content = {dress_price: self.dress.price, delivery_price: 800, dress_name: self.dress.title}
+    self.price_content = {dress_price: self.dress.price, delivery_price: 800, dress_name: self.dress.title}.to_json
   end
 end
