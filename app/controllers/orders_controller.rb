@@ -13,12 +13,16 @@ class OrdersController < ApplicationController
   def create
     @dress = Dress.find(params[:order].delete(:dress_id))
     @order = @dress.orders.new(order_params)
-    respond_to do |format|
-      if @order.save
-        format.html { redirect_to thanks_order_path(@order.id) }
+
+    if @order.save
+      total = JSON.parse(@order.price_content)['dress_price'] + JSON.parse(@order.price_content)['delivery_price']
+      if @order.payment_type_id == 1
+        redirect_to Rubykassa.pay_url(@order.id, total, {})
       else
-        format.html { render action: 'new' }
+        redirect_to thanks_order_path(@order.id)
       end
+    else
+      render action: 'new'
     end
   end
 

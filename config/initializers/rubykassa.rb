@@ -1,8 +1,8 @@
 # -*- encoding : utf-8 -*-
 Rubykassa.configure do |config|
   config.login = 'code4fun'
-  config.first_password = "code4fun"
-  config.second_password = "fun4code"
+  config.first_password = "neodelf1"
+  config.second_password = "neodelf2"
   config.mode = :test # or :production
   config.http_method = :get # or :post
   config.xml_http_method = :get # or :post
@@ -16,6 +16,6 @@ Rubykassa.configure do |config|
 
   # Define success or failure callbacks here like:
 
-  config.success_callback = ->(notification) { render text: 'success' }
+  #config.success_callback = ->(notification) { redirect_to thanks_order_path(params[:InvId]) }
   config.fail_callback = ->(notification) { redirect_to root_path }
 end
