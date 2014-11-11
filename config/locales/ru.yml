@@ -1,0 +1,18 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        order:
+          attributes:
+            name:
+              blank: 'Имя не может быть пустым.'
+            email:
+              blank: 'Email не может быть пустым.'
+            city:
+              blank: 'Город не может быть пустым.'
+            address:
+              blank: 'Адрес не может быть пустым.'
+            payment_type_id:
+              blank: 'Выберите типа оплаты.'
+            phone:
+              blank: 'Телефон не может быть пустым.'
