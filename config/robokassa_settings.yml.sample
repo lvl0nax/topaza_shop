@@ -1,0 +1,8 @@
+development:
+  LOGIN: abc
+  PASSWORD_1: abc
+  PASSWORD_2: abc
+production:
+  LOGIN: abc
+  PASSWORD_1: abc
+  PASSWORD_2: abc

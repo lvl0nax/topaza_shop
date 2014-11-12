@@ -33,4 +33,5 @@ bower.json
 /.idea
 /.idea/*
 /config/database.yml
+/config/robokassa_settings.yml
 /db/schema.rb

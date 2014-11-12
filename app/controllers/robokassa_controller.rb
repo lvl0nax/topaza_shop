@@ -4,11 +4,16 @@ class RobokassaController < ApplicationController
   def paid
     if @notification.valid_result_signature?
       @order = Order.find(params[:InvId])
-      @order.update_attribute('paid', true)
-      instance_exec @notification, &Rubykassa.result_callback
+      if @order.update_attribute('paid', true)
+        instance_exec @notification, &Rubykassa.result_callback
+      else
+        fail
+      end
     else
-      instance_exec @notification, &Rubykassa.fail_callback
+      fail
     end
+  rescue
+    fail
   end
 
   def success
@@ -16,7 +21,7 @@ class RobokassaController < ApplicationController
       @order = Order.find(params[:InvId])
       redirect_to thanks_order_path(@order.id)
     else
-      instance_exec @notification, &Rubykassa.fail_callback
+      fail
     end
   end
 
