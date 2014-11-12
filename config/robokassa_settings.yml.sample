@@ -1,8 +1,8 @@
 development:
-  LOGIN: abc
-  PASSWORD_1: abc
-  PASSWORD_2: abc
+  ROBOKASSA_LOGIN: abc
+  ROBOKASSA_PASSWORD_1: abc
+  ROBOKASSA_PASSWORD_2: abc
 production:
-  LOGIN: abc
-  PASSWORD_1: abc
-  PASSWORD_2: abc
+  ROBOKASSA_LOGIN: abc
+  ROBOKASSA_PASSWORD_1: abc
+  ROBOKASSA_PASSWORD_2: abc

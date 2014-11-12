@@ -1,8 +1,8 @@
 # -*- encoding : utf-8 -*-
 Rubykassa.configure do |config|
-  config.login = ENV['LOGIN']
-  config.first_password = ENV['PASSWORD_1']
-  config.second_password = ENV['PASSWORD_2']
+  config.login = ENV['ROBOKASSA_LOGIN']
+  config.first_password = ENV['ROBOKASSA_PASSWORD_1']
+  config.second_password = ENV['ROBOKASSA_PASSWORD_2']
   config.mode = :test # or :production
   config.http_method = :get # or :post
   config.xml_http_method = :get # or :post
