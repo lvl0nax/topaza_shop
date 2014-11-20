@@ -10,6 +10,8 @@
     = f.input :description, label: false
   = f.inputs 'Price' do
     = f.input :price, label: false
+  = f.inputs 'New Price' do
+    = f.input :new_price, label: false
   = f.inputs 'Images' do
     = f.fields_for :image do |image|
       = image.file_field :name, multiple: :true, name: 'image[name][]'

@@ -43,6 +43,19 @@
   font-size: 35px;
   margin-bottom: 20px;
 }
+.dress_main_info__old_price{
+  font-family: 'baufra';
+  color:  #13131c;
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-decoration: line-through;
+}
+.dress_main_info__new_price{
+  font-family: 'baufra';
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: red;
+}
 .gray_button_link{
   color: #7c7c8a;
   border-color: #7c7c8a;
