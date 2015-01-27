@@ -1,0 +1,18 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        order:
+          attributes:
+            name:
+              blank: 'Представьтесь, пожалуйста.'
+            email:
+              blank: 'Введите свой email.'
+            city:
+              blank: 'Выберите город доставки.'
+            address:
+              blank: 'Введите адрес доставки.'
+            payment_type_id:
+              blank: 'Выберите типа оплаты.'
+            phone:
+              blank: 'Введите телефон для связи.'
