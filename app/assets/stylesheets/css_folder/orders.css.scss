@@ -12,6 +12,18 @@
     font-size: 35px;
     line-height: 40px;
   }
+
+  .field_with_errors{
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+      color: #D31A00 !important;
+    }
+    input:-moz-placeholder, textarea:-moz-placeholder {
+      color: #D31A00 !important;
+    }
+    input{
+      border-color: #D31A00 !important;
+    }
+  }
 }
 .orders-left-dress{
   padding: 10px;
@@ -61,11 +73,31 @@
 
 .order_errors{
   margin: 20px 10px;
-  color: #ae9082;
-}
-.error_field{
-  color: #ae9082;
-  border-color: #ae9082;
+  color: #D31A00;
+  .order_errors__name{
+    position: absolute;
+    top: 435px;
+  }
+  .order_errors__email{
+    position: absolute;
+    top: 515px;
+  }
+  .order_errors__city{
+    position: absolute;
+    top: 810px;
+  }
+  .order_errors__address{
+    position: absolute;
+    top: 890px;
+  }
+  .order_errors__phone{
+    position: absolute;
+    top: 590px;
+  }
+  .order_errors__payment_type_id{
+    position: absolute;
+    top: 1090px;
+  }
 }
 
 .orders-right-info{

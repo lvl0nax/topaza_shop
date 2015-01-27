@@ -6,6 +6,8 @@ class Dress < ActiveRecord::Base
   validates_associated :images
   before_save :set_main_image
 
+  default_scope { order(:position) }
+
   has_many :images, as: :imageable, dependent: :destroy
   has_many :orders
 

@@ -1,4 +1,5 @@
 ActiveAdmin.register Dress do
+  config.sort_order = 'position_asc'
   form partial: 'admin/dresses/form'
   show do |dress|
     attributes_table do
@@ -27,9 +28,16 @@ ActiveAdmin.register Dress do
   active_admin_comments
   end
 
+  collection_action :sort, :method => :post do
+    Dress.find_each do |dress|
+      dress.update_attribute('position', params[:sortable].gsub('dress[]=', '').split('&').index(dress.id.to_s))
+    end
+    render nothing: true
+  end
+
   controller do
     def permitted_params
-      params.permit dress: [:title, :description, :size, :material, :price, :seo_title, :seo_description, :seo_keywords]
+      params.permit dress: [:title, :description, :size, :material, :price, :new_price, :seo_title, :seo_description, :seo_keywords]
     end
 
     def find_resource

@@ -14,10 +14,6 @@
       .orders-left-dress-price
         #{number_to_currency(@dress.price, separator: " ", delimiter: " ", precision: 0, unit: '')}
         = image_tag 'ruble2.png'
-    - if @order.errors.any?
-      %ol.order_errors
-        - @order.errors.values.each do |msg|
-          %li= msg.first
 
     = form_for @order  do |f|
       = f.hidden_field :dress_id, value: @dress.id
@@ -63,5 +59,14 @@
     Мы не подгоняем модели, которые продаем
     %br в интернет-магазине, и благодаря этому вы можете
     купить платье по цене ниже, чем в студии Topaza Pella.
+
+    - if @order.errors.any?
+      .order_errors
+        - @order.errors.to_h.each_pair do |key, msg|
+          %div{ class: "order_errors__#{key}"}
+            = msg
+
+
+
 = render '/partials/footer_contacts'
 
