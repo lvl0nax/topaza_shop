@@ -17,5 +17,5 @@ Rubykassa.configure do |config|
   # Define success or failure callbacks here like:
 
   #config.success_callback = ->(notification) { redirect_to thanks_order_path(params[:InvId]) }
-  config.fail_callback = ->(notification) { redirect_to root_path }
+  config.fail_callback = ->(notification) { redirect_to root_path, notice: 'Оплата завершилась неудачей. Для решения каких-то проблем напишите нам по адресу tatiana-topaza@yandex.ru' }
 end
