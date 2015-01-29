@@ -26,6 +26,11 @@ task :copy_secrets_config, roles => :app do
   db_config = "#{shared_path}/config/secrets.yml"
   run "cp #{db_config} #{release_path}/config/secrets.yml"
 end
+after "deploy:update_code", :copy_robocassa_config
+task :copy_secrets_config, roles => :app do
+  db_config = "#{shared_path}/config/robokassa_settings.yml"
+  run "cp #{db_config} #{release_path}/config/robokassa_settings.yml"
+end
 
 # В rails 3 по умолчанию включена функция assets pipelining,
 # которая позволяет значительно уменьшить размер статических
