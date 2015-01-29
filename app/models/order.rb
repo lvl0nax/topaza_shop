@@ -2,7 +2,7 @@ class Order < ActiveRecord::Base
 
   validates :name, :email, :dress_id, :city, :address, :payment_type_id, :phone, presence: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
-                                    message: "Не корректный электронный адрес" }
+                                    message: "Некорректный электронный адрес" }
   validates :phone, :numericality => true,
             :length => { :minimum => 7, :maximum => 12 }
 
