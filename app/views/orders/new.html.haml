@@ -12,7 +12,8 @@
         .orders-left-dress-body-size
           #{@dress.size}-й размер
       .orders-left-dress-price
-        #{number_to_currency(@dress.price, separator: " ", delimiter: " ", precision: 0, unit: '')}
+        //#{number_to_currency(@dress.price, separator: " ", delimiter: " ", precision: 0, unit: '')}
+        = price(@dress)
         = image_tag 'ruble2.png'
 
     = form_for @order  do |f|
@@ -23,16 +24,16 @@
         = f.text_field :name, class: 'items-item_input', placeholder: 'ВАШЕ ИМЯ'
         = f.text_field :email, class: 'items-item_input', placeholder: 'ЭЛ. ПОЧТА'
         = f.text_field :phone, class: 'items-item_input', placeholder: 'ТЕЛЕФОН'
-      .items
-        .items-title
-          АДРЕС ДОСТАВКИ
-        = f.text_field :country, class: 'items-item_input', placeholder: 'СТРАНА'
-        = f.text_field :city, class: 'items-item_input', placeholder: 'ГОРОД'
-        .items-delivery_price
-          + 800
-          = image_tag 'ruble2.png'
-        = f.text_field :address, class: 'items-item_input', placeholder: 'АДРЕС ДОСТАВКИ'
-        = f.text_field :zip_code, class: 'items-item_input', placeholder: 'ИНДЕКС'
+      /.items
+      /  .items-title
+      /    АДРЕС ДОСТАВКИ
+      /  = f.text_field :country, class: 'items-item_input', placeholder: 'СТРАНА'
+      /  = f.text_field :city, class: 'items-item_input', placeholder: 'ГОРОД'
+      /  .items-delivery_price
+      /    + 800
+      /    = image_tag 'ruble2.png'
+      /  = f.text_field :address, class: 'items-item_input', placeholder: 'АДРЕС ДОСТАВКИ'
+      /  = f.text_field :zip_code, class: 'items-item_input', placeholder: 'ИНДЕКС'
       .items
         .items-title
           СПОСОБ ОПЛАТЫ
@@ -44,7 +45,8 @@
         .items-last-summ
           Итого
           .items-last-summ-price
-            = number_to_currency(@dress.price+800, separator: " ", delimiter: " ", precision: 0, unit: '')
+            //= number_to_currency(@dress.price+800, separator: " ", delimiter: " ", precision: 0, unit: '')
+            = price(@dress)
           = image_tag 'ruble2.png' , style: 'height: 25px;'
         %a{ href: _back_url }
           .items-last-back

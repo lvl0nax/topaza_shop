@@ -10,11 +10,14 @@
   margin-top: 20px;
 }
 .sizes__content__left{
-  padding-right: 650px;
+  //padding-right: 650px;
+  padding-right: 63%;
 }
 .sizes__content__right{
-  width: 630px;
+  //width: 630px;
+  width: 59%;
   float: right;
+  min-width: 50px;
 }
 .sizes__content__right__text{
   font-family: 'Open Sans';
@@ -25,6 +28,7 @@
 .sizes__content__right__img{
   background-color: #dedfe1;
   position: relative;
+  width: 103%;
 }
 
 
