@@ -37,7 +37,7 @@ ActiveAdmin.register Dress do
 
   controller do
     def permitted_params
-      params.permit dress: [:title, :description, :size, :material, :price, :seo_title, :seo_description, :seo_keywords]
+      params.permit dress: [:title, :description, :size, :material, :price, :new_price, :seo_title, :seo_description, :seo_keywords]
     end
 
     def find_resource

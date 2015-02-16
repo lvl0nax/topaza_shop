@@ -26,6 +26,11 @@ task :copy_secrets_config, roles => :app do
   db_config = "#{shared_path}/config/secrets.yml"
   run "cp #{db_config} #{release_path}/config/secrets.yml"
 end
+after "deploy:update_code", :copy_robocassa_config
+task :copy_secrets_config, roles => :app do
+  db_config = "#{shared_path}/config/robokassa_settings.yml"
+  run "cp #{db_config} #{release_path}/config/robokassa_settings.yml"
+end
 
 # В rails 3 по умолчанию включена функция assets pipelining,
 # которая позволяет значительно уменьшить размер статических
@@ -49,13 +54,13 @@ ssh_options[:forward_agent] = true
 set :application,     "topaza-shop"
 
 # Сервер размещения проекта.
-set :deploy_server,   "neon.locum.ru"
+set :deploy_server,   "sulfur.locum.ru"
 
 # Не включать в поставку разработческие инструменты и пакеты тестирования.
 set :bundle_without,  [:development, :test]
 
-set :user,            "hosting_lvl0nax"
-set :login,           "lvl0nax"
+set :user,            "hosting_topazapella"
+set :login,           "topazapella"
 set :use_sudo,        false
 set :deploy_to,       "/home/#{user}/projects/#{application}"
 set :unicorn_conf,    "/etc/unicorn/#{application}.#{login}.rb"

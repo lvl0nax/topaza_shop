@@ -11,13 +11,19 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
-    respond_to do |format|
-      if @order.save
-        format.html { redirect_to thanks_order_path(@order.id) }
+    @dress = Dress.find(params[:order].delete(:dress_id))
+    @order = @dress.orders.new(order_params)
+
+    if @order.save
+      if @order.payment_type_id == 1
+        total = JSON.parse(@order.price_content).values_at('dress_price', 'delivery_price').inject{|sum,i| sum + i }
+        order_in_json = @order.as_json.delete_if {|key| key == 'price_content' }
+        redirect_to Rubykassa.pay_url(@order.id, total, order_in_json, { culture: :ru, custom: order_in_json})
       else
-        format.html { render action: 'new' }
+        redirect_to thanks_order_path(@order.id)
       end
+    else
+      render action: 'new'
     end
   end
 

@@ -10,9 +10,11 @@ ActiveAdmin.register Order do
     column :country
     column :city
     column :address
-    column :zip_code
     column :payment_type do |order|
       order.payment_type.name unless order.payment_type.nil?
+    end
+    column :paid do |order|
+      order.paid ? 'Оплачено' : 'Не оплачено'
     end
     actions
   end

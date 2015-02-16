@@ -1,6 +1,6 @@
 .orders
   .orders-left
-    %h1 Детали заказа / Детали покупки / Оформление заказа
+    %h1 Оформление заказа
     .orders-left-dress
       .orders-left-dress-image
         = image_tag @dress.images.main.name.url(:dress_small)
@@ -14,7 +14,9 @@
       .orders-left-dress-price
         #{number_to_currency(@dress.price, separator: " ", delimiter: " ", precision: 0, unit: '')}
         = image_tag 'ruble2.png'
+
     = form_for @order  do |f|
+      = f.hidden_field :dress_id, value: @dress.id
       .items
         .items-title
           ВАШИ КОНТАКТЫ
@@ -44,10 +46,11 @@
           .items-last-summ-price
             = number_to_currency(@dress.price+800, separator: " ", delimiter: " ", precision: 0, unit: '')
           = image_tag 'ruble2.png' , style: 'height: 25px;'
-        .items-last-back
-          = image_tag 'back.png'
-          .items-last-back-text
-            ВЕРНУТЬСЯ
+        %a{ href: _back_url }
+          .items-last-back
+            = image_tag 'back.png'
+            .items-last-back-text
+              ВЕРНУТЬСЯ
         .items-last-buy
           = f.submit 'ОПЛАТИТЬ', class: 'items-last-buy-submit'
         .items-last-comments
@@ -56,5 +59,14 @@
     Мы не подгоняем модели, которые продаем
     %br в интернет-магазине, и благодаря этому вы можете
     купить платье по цене ниже, чем в студии Topaza Pella.
+
+    - if @order.errors.any?
+      .order_errors
+        - @order.errors.to_h.each_pair do |key, msg|
+          %div{ class: "order_errors__#{key}"}
+            = msg
+
+
+
 = render '/partials/footer_contacts'
 

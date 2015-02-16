@@ -12,9 +12,10 @@
       .header
         .header_container
           .header_container__logo
-            = link_to 'http://topaza.lvl0nax.lclients.ru' do
+            = link_to '/' do
               = image_tag image_url('logo.png')
           .header_container__menu
+            = link_to 'ГЛАВНАЯ', root_path, {class: ('current_page_link' if current_page?(root_path))}
             = link_to 'МАГАЗИН', dresses_path, {class: ('current_page_link' if current_page?(dresses_path))}
             = link_to 'РАЗМЕРЫ', dresses_sizes_path, {class: ('current_page_link' if current_page?(dresses_sizes_path))}
             = link_to 'УСЛОВИЯ ПОКУПКИ', conditions_path, {class: ('current_page_link' if current_page?(conditions_path))}
@@ -27,4 +28,4 @@
             %a{href: 'http://vk.com/topazapella'} ВКОНТАКТЕ
             %a{href: 'https://www.facebook.com/topazapellacouture'} FACEBOOK
             %a{href: 'http://instagram.com/topazapella_couture'} INSTAGRAM
-            %a{href: 'https://twitter.com/topazaPellaSpb'} TWITTER
+            %a{href: 'http://ok.ru/group/53116532621566'} ОДНОКЛАССНИКИ

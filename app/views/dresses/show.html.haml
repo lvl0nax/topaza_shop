@@ -14,13 +14,9 @@
       = link_to 'таблица размеров', dresses_sizes_path
       %br
       = @dress.material
-
     .dress_main_info__text
       = @dress.description
-
-    .dress_main_info__price
-      = number_to_currency(@dress.price, separator: ',', delimiter: ' ', precision: 0, format: '%n %u', unit: 'P')
-
+    = show_price(@dress)
     .dress_main_info__link_to_order
       = link_to 'ЗАКАЗАТЬ', new_order_path(dress_id: @dress.id), {class: 'button_link gray_button_link'}
 
