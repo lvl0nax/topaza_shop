@@ -12,7 +12,7 @@
       .header
         .header_container
           .header_container__logo
-            = link_to '/' do
+            = link_to 'http://topaza-pella.ru' do
               = image_tag image_url('logo.png')
           .header_container__menu
             = link_to 'ГЛАВНАЯ', root_path, {class: ('current_page_link' if current_page?(root_path))}
